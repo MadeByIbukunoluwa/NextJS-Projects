@@ -10,7 +10,8 @@ function EventList(props) {
              title ={event.title} 
              location={event.location} 
              date ={event.date}
-             image={event.image}
+             image={event.image} 
+             key ={Math.random()* 7388992783928278}
               />)}
         </ul>
     )
