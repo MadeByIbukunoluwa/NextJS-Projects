@@ -10,7 +10,7 @@ const DUMMY_EVENTS = [
       "Everyone can learn to code! Yes, everyone! In this live event we are going to have a lot of activties",
     location: "Somestreet 25 12345 San Somewhero",
     date: "2023-05-29",
-    image: "images/coding-event.jpg",
+    image: "images/coding.jpg",
     isFeatured: false,
   },
   {
@@ -20,17 +20,17 @@ const DUMMY_EVENTS = [
       "We know, networking is no fun if you are an introvert person. That's why we came to this wonderful event",
     location: "New Wall Street 5, 98765 New Work",
     date: "2023-05-29",
-    image: "images/coding-event.jpg",
+    image: "images/introvert.jpg",
     isFeatured: false,
   },
   {
     id: 'e3',
     title: "Networking for extroverts",
     description:
-      "We know: Netwokring is no fun if you are an introvert person. Thats why we came",
+      "We know: Networking is no fun if you are an introvert person. Thats why we came",
     location: "Somestreet 25 12345 San Somewhero",
     date: "2023-05-29",
-    image: "images/coding-event.jpg",
+    image: "images/extrovert.jpg",
     isFeatured: true,
   },
   {
@@ -40,7 +40,7 @@ const DUMMY_EVENTS = [
       "You probably need no help with networking in general. But focusing your energy",
     location: "Somestreet 25 12345 San Somewhero",
     date: "2023-05-29",
-    image: "images/coding-event.jpg",
+    image: "images/coding.jpg",
     isFeatured: true,
   },
 ];
@@ -63,5 +63,10 @@ export function getFilteredEvents (dateFilter) {
         eventDate.getFullYear() === year && eventDate.getMonth() === month - 1
       );
     });
+    return filteredEvents
 }
 
+
+export function getEventById (id) {
+  return DUMMY_EVENTS.find((event)=> event.id === id)
+}
